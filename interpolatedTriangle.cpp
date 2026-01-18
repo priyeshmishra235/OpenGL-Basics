@@ -37,7 +37,7 @@ int main() {
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-  // 6. window resulution and name setup
+  // 6. window resolution and name setup
   GLFWwindow *window = glfwCreateWindow(
       800, 600, "GL Interpolated Color Triangle", nullptr, nullptr);
   if (!window) {
@@ -56,10 +56,11 @@ int main() {
   }
 
   // 9. vertices defined
+  float s = 0.9f;
   float vertices[] = {
-      -0.5f, -0.5f, 1.0f, 0.0f, 0.0f, // bottom-left: red
-      0.5f,  -0.5f, 0.0f, 1.0f, 0.0f, // bottom-right: green
-      0.0f,  0.5f,  0.0f, 0.0f, 1.0f  // top-center: blue
+      -s,   -s, 1.0f, 0.0f, 0.0f, // bottom-left: red
+      s,    -s, 0.0f, 1.0f, 0.0f, // bottom-right: green
+      0.0f, s,  0.0f, 0.0f, 1.0f  // top-center: blue
   };
 
   // 10. first vao then then vbo
